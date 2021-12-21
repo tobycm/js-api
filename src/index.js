@@ -12,28 +12,11 @@ api.use(express.static(__dirname + '/public'));
 
 api.get('/join', (req, res) => {
     accesscode = req.query.code;
-    res.send(accesscode);
-
-    const http = require('http');
-
-    http.get('http://akatsukiducaapi.ddns.net/join?code=' + accesscode, (resp) => {
-    let data = '';
-
-    // A chunk of data has been received.
-    resp.on('data', (chunk) => {
-        data += chunk;
+    res.send('<h1>You are now connected to the server!</h1>');
+    const request = require('request');
+    request('http://akatsukiducaapi.ddns.net/join?code=' + accesscode, function (error, response, body) {
+    if (err) { return console.log(err); }
     });
-
-    // The whole response has been received. Print out the result.
-    resp.on('end', () => {
-        console.log(JSON.parse(data).explanation);
-    });
-
-    }).on("error", (err) => {
-    console.log("Error: " + err.message);
-    });
-
-
 })
 
 
