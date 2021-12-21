@@ -4,7 +4,7 @@ const api = express();
 
 var accesscode;
 
-api.listen(3000, () => {
+api.listen(5000, () => {
   console.log('API up and running!');
 });
 
@@ -18,6 +18,3 @@ api.get('/join', (req, res) => {
     if (err) { return console.log(err); }
     });
 })
-
-
-
