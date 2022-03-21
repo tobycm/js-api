@@ -8,7 +8,7 @@ api.listen(5000, () => {
   console.log('API up and running!');
 });
 
-api.use(express.static(__dirname + '/public'));
+api.use("/", express.static(__dirname + '/public'));
 
 api.get('/join', (req, res) => {
   accesscode = req.query.code;
