@@ -14,7 +14,7 @@ api.get('/join', (req, res) => {
   accesscode = req.query.code;
   res.send('<h1>You are now connected to the server!</h1>');
   const request = require('request');
-  request('http://akatsukiducaapi.ddns.net/join?code=' + accesscode)
+  request('http://127.0.0.1/joinguild?code=' + accesscode)
 });
 
 api.get("/redirect/api/js/nitro", (req, res) => {
