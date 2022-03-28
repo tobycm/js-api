@@ -4,7 +4,7 @@ const api = express();
 
 var accesscode;
 
-api.listen(5000, () => {
+api.listen(6000, () => {
   console.log('API up and running!');
 });
 
