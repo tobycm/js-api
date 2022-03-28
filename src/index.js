@@ -2,8 +2,6 @@ const express = require('express');
 
 const api = express();
 
-var accesscode;
-
 api.listen(5000, () => {
     console.log('API up and running!');
 });
